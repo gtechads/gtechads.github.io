@@ -155,6 +155,14 @@
     <h3>gTech t-shirt</h3>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
     <form action="./thankyou.html" method="get">
+    <label for="product-label">Product</label>
+    <select name="product">
+    <option value="tshirt">1</option>
+    <option value="hoodie">2</option>
+    <option value="socks">3</option>
+    <option value="cap">4</option>
+    </select>
+    <br>
     <label for="quanity-label">Quantity</label>
     <select name="quantity">
     <option value="1">1</option>
@@ -171,29 +179,10 @@
     <option value="yellow">Yellow</option>
     </select>
     <br>
-    <button type="submit" name="product" value="tshirt">Confirm purchase</button>
+    <button type="submit" name="confirm_order" value="confirmed">Confirm purchase</button>
     </form>
     <h3>gTech hoodie</h3>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    <form action="./thankyou.html" method="get">
-    <label for="quanity-label">Quantity</label>
-    <select name="quantity">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    </select>
-    <br>
-    <label for="colour-label">Colour</label>
-    <select name="colour">
-    <option value="red">Red</option>
-    <option value="blue">Blue</option>
-    <option value="green">Green</option>
-    <option value="yellow">Yellow</option>
-    </select>
-    <br>
-    <button type="submit" name="product" value="hoodie">Confirm purchase</button>
-    </form>
     <br>
     <a class="logo" href="./"><img src="images/logo.png"/></a>
   </body>
