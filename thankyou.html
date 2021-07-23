@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
   <head>
@@ -123,8 +122,14 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      
+      // Default to 'denied'.
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+      });
 
+      gtag('js', new Date());
       gtag('config', 'DC-8462868');
     </script>
     <!-- End of global snippet: Please do not remove -->
@@ -133,7 +138,6 @@
     <!--
     Event snippet for All visitors on https://gtechads.github.io/: Please do not remove.
     Place this snippet on pages with events you’re tracking. 
-    Creation date: 04/23/2020
     -->
     <script>
       gtag('event', 'conversion', {
@@ -149,7 +153,6 @@
     <!--
     Event snippet for Thank you page visitors on https://gtechads.github.io/thankyou.html: Please do not remove.
     Place this snippet on pages with events you’re tracking. 
-    Creation date: 04/23/2020
     -->
     <script>
       gtag('event', 'conversion', {
@@ -165,16 +168,15 @@
     <!--
     Event snippet for Transaction on https://gtechads.github.io/thankyou.html: Please do not remove.
     Place this snippet on pages with events you’re tracking. 
-    Creation date: 04/23/2020
     -->
     <script>
       gtag('event', 'purchase', {
         'allow_custom_scripts': true,
         'value': '[Revenue]',
         'transaction_id': '[OrderID]',
-        'u1': 'document.write(qs("product"))',
-        'u2': 'document.write(qs("quantity"))',
-        'u3': 'document.write(qs("colour"))',
+        'u1': '[product]',
+        'u2': '[quantity]',
+        'u3': '[colour]',
         'send_to': 'DC-8462868/trans0/user_0+transactions'
       });
     </script>

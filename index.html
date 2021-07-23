@@ -108,17 +108,30 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
+      // Default to 'denied'.
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+      });
+
+      gtag('js', new Date());
       gtag('config', 'DC-8462868');
     </script>
     <!-- End of global snippet: Please do not remove -->
-
+    
+    <script>
+      function consentGranted() {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted'
+        });
+      }
+    </script>
 
     <!--
     Event snippet for All visitors on https://gtechads.github.io/: Please do not remove.
     Place this snippet on pages with events you’re tracking. 
-    Creation date: 04/23/2020
     -->
     <script>
       gtag('event', 'conversion', {
@@ -134,7 +147,6 @@
     <!--
     Event snippet for Homepage visitors on https://gtechads.github.io/index.html: Please do not remove.
     Place this snippet on pages with events you’re tracking. 
-    Creation date: 04/23/2020
     -->
     <script>
       gtag('event', 'conversion', {
@@ -155,6 +167,7 @@
       <a href="./product.html">Product page</a> |
       <a href="./publisher.html">Publisher</a>
     </p>
+    <button onclick="consentGranted">Yes, I consent!</button>
     <h2>Content</h2>
     <h3>Article 1</h3>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
