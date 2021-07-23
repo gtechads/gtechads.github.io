@@ -101,7 +101,6 @@
 
     <!-- 
     Start of global snippet: Please do not remove
-    Place this snippet between the <head> and </head> tags on every page of your site.
     -->
     <!-- Global site tag (gtag.js) - Google Marketing Platform -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=DC-8462868"></script>
@@ -111,12 +110,13 @@
 
       // Default to 'denied'.
       gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'analytics_storage': 'denied'
+        'ad_storage': 'denied', // Applies to Ads, Analytics, Floodlight
+        'analytics_storage': 'denied' // Applies to Google Analytics only
       });
 
       gtag('js', new Date());
       gtag('config', 'DC-8462868');
+      gtag('set', 'url_passthrough', true);
     </script>
     <!-- End of global snippet: Please do not remove -->
     
@@ -165,7 +165,7 @@
     <p>
       <a href="./index.html">Homepage</a> | 
       <a href="./product.html">Product page</a> |
-      <a href="./publisher.html">Publisher</a>
+      <a href="./publisher/">Publisher</a>
     </p>
     <button onclick="consentGranted">Yes, I consent!</button>
     <h2>Content</h2>
